@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <label for="num1">Digite o primeiro valor: </label>
+    <input type="number" id="num1"><br><br>
+    <label for="num2">Digite o segundo valor: </label>
+    <input type="number" id="num2"><br><br>
+
+    <label><input type="checkbox" id="soma"> Soma</label><br>
+    <label><input type="checkbox" id="subtracao"> Subtração</label><br>
+    <label><input type="checkbox" id="multiplicacao"> Multiplicação</label><br>
+    <label><input type="checkbox" id="divisao"> Divisão</label><br><br>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <script>
+        function calcular() {
+            let numero1 = parseFloat(document.getElementById("num1").value);
+            let numero2 = parseFloat(document.getElementById("num2").value);
+
+            // Soma
+            if (document.getElementById("soma").checked) {
+                let soma = numero1 + numero2;
+                document.write("Resultado da Soma: " + soma + "<br>");
+                console.log(soma);
+            }
+
+            // Subtração
+            if (document.getElementById("subtracao").checked) {
+                let subtracao = numero1 - numero2;
+                document.write("Resultado da Subtração: " + subtracao + "<br>");
+                console.log(subtracao);
+            }
+
+            // Multiplicação
+            if (document.getElementById("multiplicacao").checked) {
+                let multiplicacao = numero1 * numero2;
+                document.write("Resultado da Multiplicação: " + multiplicacao + "<br>");
+                console.log(multiplicacao);
+            }
+
+            // Divisão (com tratamento de divisão por zero)
+            if (document.getElementById("divisao").checked) {
+                if (numero2 === 0) {
+                    document.write("Erro: divisão por zero não existe!<br>");
+                    console.log("Erro: divisão por zero");
+                } else {
+                    let divisao = numero1 / numero2;
+                    document.write("Resultado da Divisão: " + divisao + "<br>");
+                    console.log(divisao);
+                }
+            }
+
+            // Pergunta se quer continuar
+            let continuar = confirm("Deseja continuar?");
+            if (continuar) {
+                // Recarrega a página para voltar ao formulário
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>
