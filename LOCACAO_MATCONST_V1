@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- Define que o documento é HTML5 -->
+
+<html lang="pt-BR">
+<!-- Tag raiz do documento, idioma definido como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres (UTF-8 suporta acentos) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o site se adaptar a celulares e tablets (responsivo) -->
+
+    <title>ConstruMais - Aluguel de Equipamentos</title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Importa o arquivo CSS externo para estilizar -->
+</head>
+
+<body>
+    <!-- Corpo da página, tudo que aparece para o usuário -->
+
+    <header>
+        <!-- Cabeçalho do site -->
+        <h1>ConstruMais</h1>
+        <!-- Título principal -->
+        <nav>
+            <!-- Menu de navegação -->
+            <a href="#inicio">Início</a>
+            <a href="#equipamentos">Equipamentos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Conteúdo principal da página -->
+
+        <section id="inicio">
+            <!-- Seção inicial -->
+            <h2>Bem-vindo à ConstruMais</h2>
+            <p>Aluguel de equipamentos para construção civil com qualidade e segurança.</p>
+            <button onclick="mostrarPromocao()">Ver Promoção</button>
+            <!-- Botão que chama uma função JavaScript -->
+            <p id="promocao"></p>
+            <!-- Parágrafo vazio que será preenchido pelo JS -->
+        </section>
+
+        <section id="equipamentos">
+            <!-- Seção de equipamentos -->
+            <h2>Equipamentos disponíveis</h2>
+            <table border="1">
+                <!-- Tabela simples -->
+                <tr>
+                    <th>Equipamento</th>
+                    <th>Preço por dia</th>
+                </tr>
+                <tr>
+                    <td>Betoneira</td>
+                    <td>R$ 80,00</td>
+                </tr>
+                <tr>
+                    <td>Andaime</td>
+                    <td>R$ 50,00</td>
+                </tr>
+                <tr>
+                    <td>Furadeira</td>
+                    <td>R$ 30,00</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="sobre">
+            <!-- Seção sobre a empresa -->
+            <h2>Sobre nós</h2>
+            <p>Somos uma empresa especializada em aluguel de equipamentos para construção civil, oferecendo praticidade e economia para nossos clientes.</p>
+        </section>
+
+        <section id="contato">
+            <!-- Seção de contato -->
+            <h2>Contato</h2>
+            <form onsubmit="return validarFormulario()">
+                <!-- Formulário com 5 campos -->
+                <label>Nome: <input type="text" id="nome"></label><br>
+                <label>Email: <input type="email" id="email"></label><br>
+                <label>Telefone: <input type="tel" id="telefone"></label><br>
+                <label>Equipamento desejado: 
+                    <select id="equipamento">
+                        <option>Betoneira</option>
+                        <option>Andaime</option>
+                        <option>Furadeira</option>
+                    </select>
+                </label><br>
+                <label>Mensagem: <textarea id="mensagem"></textarea></label><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Rodapé do site -->
+        <p>&copy; 2026 ConstruMais - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript dentro do mesmo arquivo -->
+    <script>
+        // Função que mostra uma promoção
+        function mostrarPromocao() {
+            // Seleciona o elemento com id "promocao"
+            let promo = document.getElementById("promocao");
+            // Define o texto dentro do elemento
+            promo.innerText = "Promoção: Alugue 3 dias e ganhe o 4º grátis!";
+        }
+
+        // Função que valida o formulário
+        function validarFormulario() {
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+
+            // Verifica se nome e email foram preenchidos
+            if (nome === "" || email === "") {
+                alert("Por favor, preencha nome e email.");
+                return false; // Impede envio
+            }
+
+            alert("Formulário enviado com sucesso!");
+            return true; // Permite envio
+        }
+    </script>
+</body>
+</html>
