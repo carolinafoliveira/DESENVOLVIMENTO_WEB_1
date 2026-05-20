@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia do IF | Calendário Acadêmico</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Guia do IF</h1>
+    <nav>
+      <ul>
+        <li><a href="versao3.html">Início</a></li>
+        <li><a class="active" href="calendariov1.html">Calendário</a></li>
+        <li><a href="index3.html">Mapa do IF</a></li>
+        <li><a href="index4.html">SUAP</a></li>
+        <li><a href="index5.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Calendário Acadêmico</h2>
+      <p>Monte sua semana acadêmica em poucos cliques.</p>
+      <p>Escolha seu curso e o semestre para visualizar um cronograma organizado por dia, horário, disciplina, professor e local.</p>
+    </section>
+
+    <section>
+      <h2>Como usar</h2>
+      <ul>
+        <li>1. Curso: selecione a formação que você está cursando.</li>
+        <li>2. Semestre: escolha de 1º a 6º semestre.</li>
+        <li>3. Local: veja a sala correspondente no cronograma.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Escolha rápida</h2>
+      <form>
+        <label for="curso">Curso:</label>
+        <select id="curso">
+          <option value="">Selecione uma opção</option>
+          <option value="analise">Análise de Sistemas</option>
+          <option value="turismo">Turismo</option>
+          <option value="matematica">Matemática</option>
+          <option value="pedagogia">Pedagogia</option>
+          <option value="edificacoes">Edificações</option>
+        </select>
+        <br><br>
+        <label for="semestre">Semestre:</label>
+        <select id="semestre">
+          <option value="">Selecione o semestre</option>
+          <option value="1">1º semestre</option>
+          <option value="2">2º semestre</option>
+          <option value="3">3º semestre</option>
+          <option value="4">4º semestre</option>
+          <option value="5">5º semestre</option>
+          <option value="6">6º semestre</option>
+        </select>
+      </form>
+    </section>
+
+    <section>
+      <h2>Cronograma</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Dia</th>
+            <th>19h00 às 20h40</th>
+            <th>21h00 às 22h40</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Segunda-feira</td>
+            <td>Disciplina A</td>
+            <td>Disciplina B</td>
+          </tr>
+          <tr>
+            <td>Terça-feira</td>
+            <td>Disciplina C</td>
+            <td>Disciplina D</td>
+          </tr>
+          <tr>
+            <td>Quarta-feira</td>
+            <td>Disciplina E</td>
+            <td>Disciplina F</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Outros atalhos</h2>
+      <ul>
+        <li><a href="index3.html">Abrir mapa do IF</a></li>
+        <li><a href="index4.html">Ver guia do SUAP</a></li>
+        <li><a href="index5.html">Enviar dúvida</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Guia do IF. Calendário de apoio para organização acadêmica.</p>
+  </footer>
+</body>
+</html>
